@@ -2,9 +2,66 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-size: 1rem;
   font-family: "Ubuntu", sans-serif;
+
+  --dark-blue: rgb(39, 43, 54);
+  --font-main: rgb(92, 96, 118);
+}
+
+/* DRY */
+
+header,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-blue);
+  color: white;
+}
+
+h2,
+legend {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+main,
+select {
+  color: var(--font-main);
+}
+
+/* BASIC STYLES */
+
+main {
+  padding-inline: 1rem;
+}
+
+h1 {
+  margin-block: 2rem;
+  font-size: 1.5rem;
+}
+
+section {
+  padding-block: 2rem;
+  text-align: center;
+  border-bottom: 5px solid var(--dark-blue);
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+form {
+  margin-top: 0.25rem;
+  border-top: 2px solid var(--dark-blue);
 }
 
 footer p {
   font-style: italic;
+}
+
+fieldset {
+  border: none;
 }
