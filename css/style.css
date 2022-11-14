@@ -7,23 +7,36 @@
 
   --dark-blue: rgb(39, 43, 54);
   --font-main: rgb(92, 96, 118);
+  --input-clr: rgb(228, 228, 228);
 }
 
 /* DRY */
 
 header,
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: var(--dark-blue);
+}
+
+header,
+.input-div {
+  display: flex;
+}
+
+header,
+button,
+footer {
   color: white;
+}
+
+h2,
+legend,
+button {
+  font-weight: 700;
 }
 
 h2,
 legend {
   font-size: 1.25rem;
-  font-weight: 700;
   color: var(--dark-blue);
 }
 
@@ -32,7 +45,71 @@ select {
   color: var(--font-main);
 }
 
+.input-div input,
+select {
+  height: 2.5rem;
+}
+
+.input-div input,
+select,
+textarea,
+button {
+  border: none;
+  border-radius: 5px;
+}
+
+.input-div input,
+select,
+textarea {
+  padding-inline: 1rem;
+  background-color: var(--input-clr);
+}
+
+form,
+.news-legend {
+  border-top: 2px solid var(--dark-blue);
+}
+
+input[type="checkbox"],
+input[type="radio"],
+button {
+  cursor: pointer;
+}
+
+footer p,
+section {
+  text-align: center;
+}
+
+#zip,
+button,
+h2 {
+  margin-bottom: 1rem;
+}
+
+.news-legend,
+textarea,
+button {
+  width: 100%;
+}
+
+footer p,
+legend {
+  padding-top: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border: 2px solid var(--dark-blue);
+}
+
 /* BASIC STYLES */
+
+header {
+  justify-content: center;
+  align-items: center;
+}
 
 main {
   padding-inline: 1rem;
@@ -45,23 +122,67 @@ h1 {
 
 section {
   padding-block: 2rem;
-  text-align: center;
   border-bottom: 5px solid var(--dark-blue);
-}
-
-h2 {
-  margin-bottom: 1rem;
 }
 
 form {
   margin-top: 0.25rem;
-  border-top: 2px solid var(--dark-blue);
-}
-
-footer p {
-  font-style: italic;
 }
 
 fieldset {
   border: none;
+}
+
+.input-div {
+  flex-direction: column;
+}
+
+.input-div label {
+  padding: 1rem 0 0.25rem 0;
+}
+
+input[required]::placeholder {
+  text-align: right;
+}
+
+#zip {
+  width: 50%;
+}
+
+fieldset p {
+  margin-block: 1rem;
+}
+
+.checkdiv input {
+  margin: 0 0.5rem 0.75rem 0;
+}
+
+#plain {
+  margin-bottom: 1.5rem;
+}
+
+textarea {
+  height: 4rem;
+  margin: 0.5rem 0 1rem 0;
+  padding-block: 0.5rem;
+}
+
+button {
+  height: 3rem;
+  background-color: rgb(28, 133, 98);
+  cursor: pointer;
+  transition: all 0.7s ease;
+}
+
+button:hover {
+  color: var(--dark-blue);
+  background-color: rgb(46, 213, 157);
+}
+
+footer {
+  height: 10rem;
+}
+
+footer p {
+  font-style: italic;
 }
