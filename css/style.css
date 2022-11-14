@@ -98,10 +98,16 @@ legend {
   padding-top: 1rem;
 }
 
+input,
+select,
+textarea {
+  transition: background-color 0.5s ease;
+}
+
 input:focus,
 select:focus,
 textarea:focus {
-  border: 2px solid var(--dark-blue);
+  background-color: antiquewhite;
 }
 
 /* BASIC STYLES */
@@ -185,4 +191,33 @@ footer {
 
 footer p {
   font-style: italic;
+}
+
+/* MEDIA QUERY */
+
+@media (min-width: 768px) {
+  main {
+    margin-inline: auto;
+    max-width: 735px;
+  }
+
+  .input-div {
+    flex-direction: row;
+  }
+
+  .input-div input,
+  select {
+    flex-basis: 75%;
+    margin-block: 1rem;
+  }
+
+  .input-div label {
+    flex-basis: 25%;
+    margin-block: auto;
+    padding: 0;
+  }
+
+  #zip {
+    flex-basis: 20%;
+  }
 }
